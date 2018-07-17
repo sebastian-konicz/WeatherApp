@@ -1,0 +1,26 @@
+.footer {
+  height: 50px;
+  border: 1px solid black;
+  padding: 40px 30px;
+  @include tablet{
+    flex-wrap: wrap;
+    [class*="col-"] {
+      width: 50%;
+      h3{
+        font-size: 1.7rem;
+      }
+      a{
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  a{
+    font-size: 0.9rem;
+    line-height: 2rem;
+    color: map-get($colors, accent-color);
+  }
+  i{
+    font-size: 2rem;
+  }
+}

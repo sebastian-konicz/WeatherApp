@@ -1,0 +1,12 @@
+.weather {
+  margin-top: 20px;
+  border: 1px solid black;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+
+    @include small{
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,30 @@
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+    @include small{
+    flex-wrap: wrap;
+  }
+
+  .gallery-element{
+    width: 32%;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: map-get($colors, light-color);
+    overflow: hidden;
+
+    @include mobile {
+      width: 70%;
+      margin: 0 auto 20px auto;
+      min-width: 200px;
+    }
+    .gallery-element-content{
+      padding: 30px 10px;
+      h3{
+        font-weight: 700;
+      }
+    }
+  }
+}
