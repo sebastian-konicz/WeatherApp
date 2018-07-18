@@ -11,8 +11,9 @@ class Form extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if (typeof this.props.formData === 'function' ){
-            this.props.formData(this.state.city, this.state.country);
+        if (typeof this.props.formDataWeather === 'function' && typeof this.props.formDataForecast === 'function'){
+            this.props.formDataWeather(this.state.city, this.state.country);
+            this.props.formDataForecast(this.state.city, this.state.country);
         }
     }
 
