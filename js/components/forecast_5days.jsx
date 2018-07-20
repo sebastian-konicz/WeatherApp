@@ -20,12 +20,12 @@ class Forecast extends React.Component {
     componentWillReceiveProps(nextProps){
         console.log(nextProps.forecast.list[0].dt_txt)
         let dateArray = []
-        for (let i = 0 ; i < nextProps.forecast.list.length ; i++){
+        for (let i = 0 ; i < 8 ; i++){
             dateArray.push(nextProps.forecast.list[i].dt_txt)
         }
 
         let temperatureArray = []
-        for (let i = 0; i < nextProps.forecast.list.length; i++){
+        for (let i = 0; i < 8; i++){
             temperatureArray.push(nextProps.forecast.list[i].main.temp)
         }
 

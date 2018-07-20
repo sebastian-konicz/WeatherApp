@@ -17,6 +17,14 @@ class Form extends React.Component {
         }
     }
 
+    handleGeolocation = (event) => {
+        event.preventDefault();
+        if (typeof this.props.formDataGeolocation === 'function'){
+            this.props.formDataGeolocation();
+            console.log("działa")
+        }
+    }
+
     handleCity = (event) => {
         this.setState({
             city: event.target.value
@@ -48,7 +56,10 @@ class Form extends React.Component {
                            value={this.state.country}
                            onChange={this.handleCountry}
                     />
-                    <button className="form-button col-12" value="Submit" onClick={this.handleSubmit}>Sprawdź</button>
+                    <button className="form-button col-12" value="Submit" onClick={this.handleSubmit}>
+                        Sprawdź <i className="fas fa-search"></i></button>
+                    <button className="form-button col-12" value="Submit" onClick={this.handleGeolocation}>
+                        Geolokalizacja <i className="fas fa-map-marker-alt"></i></button>
                 </form>
             </section>
         )

@@ -1,72 +1,100 @@
 import React from "react";
 import {Line} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 
 class Forecast extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            temperature: "",
-            dates: "",
+            visibility: "",
             chartData: {
                 labels:[],
-                datasets: [{
-                    label: 'Temperatura',
-                    data:[25.67, 26.39, 21.18, 20.2, 19.34, 19.15, 21.44, 24.58, 23.15, 24.49, 22.58, 20, 19.08, 17.27, 19.64, 23.39, 25.18, 24.62, 22.31, 20.33, 17.1, 14.91, 18.56, 21.35, 22.53, 22.35, 20.27, 17.24, 17.31, 17.35, 19.86, 21.96, 22.72, 23.56, 21.3, 17.29, 15.06, 14.05, 20.14, 22.5]
-                }],
+                datasets: [
+                    {
+                        label: 'Temperatura',
+                        data:[],
+                    },
+                 ]
             }
         }
     }
 
     componentWillReceiveProps(nextProps){
-        console.log(nextProps.forecast.list[0].dt_txt)
+        console.log(nextProps.forecast)
         let dateArray = []
-        for (let i = 0 ; i < nextProps.forecast.list.length ; i++){
-            dateArray.push(nextProps.forecast.list[i].dt_txt)
-        }
+        if(nextProps.forecast.list != undefined) {
 
-        let temperatureArray = []
-        for (let i = 0; i < nextProps.forecast.list.length; i++){
-            temperatureArray.push(nextProps.forecast.list[i].main.temp)
-        }
-
-        this.setState({
-            temperature: temperatureArray,
-            dates: dateArray,
-        })
-
-
-        this.setState(prevState => ({
-            chartData: {
-            ...prevState.chartData,
-            labels: dateArray,
-            datasets: [ {label: 'lalalal', data: temperatureArray }]
+            for (let i = 0 ; i < 8 ; i++){
+                dateArray.push(nextProps.forecast.list[i].dt_txt.slice(11,16))
             }
-        }))
-        //
-        // console.log(temperatureArray)
-        // this.setState( prevState => ({
-        //     chartData: {
-        //         ...prevState.chartData,
-        //        datasets: [...datasets, {label: 'lalalal', data: temperatureArray }]
-        //     }
-        // }))
 
+            let temperatureArray = []
+            for (let i = 0; i < 8; i++){
+                temperatureArray.push(nextProps.forecast.list[i].main.temp)
+            }
 
+            let temperatureArrayMin = []
+            for (let i = 0; i < 8; i++){
+                temperatureArrayMin.push(nextProps.forecast.list[i].main.temp_min)
+            }
 
+            let temperatureArrayMax = []
+            for (let i = 0; i < 8; i++){
+                temperatureArrayMax.push(nextProps.forecast.list[i].main.temp_max)
+            }
+            this.setState({
+                visibility: true
+            })
 
-
+            this.setState(prevState => ({
+                chartData: {
+                ...prevState.chartData,
+                labels: dateArray,
+                datasets: [ {label: 'Temperatura', data: temperatureArray }]
+                }
+            }))
+        }
     }
 
 
     render() {
-        console.log('state w renderze', this.state)
-        console.log(this.state.temperature)
-        console.log(this.state.chartData)
-        return <section className="container forecast">
+        // Setting the visibility of the section
+        let isVisible = "visuallyhidden"
+        if(this.state.visibility === true){
+            isVisible = "visible"
+        }
+
+        return <section className={`container forecast ${isVisible}`}>
             <h2>Prognoza 24 h</h2>
             <Line
                 data={this.state.chartData}
                 options={{
+                    legend: {
+                        labels: {
+                            fontColor: 'white',
+                            fontSize: 20
+                        }
+                    },
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 10,
+                            bottom: 10
+                        }
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 20
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 20
+                            }
+                        }]
+                    }
                     // maintainAspectRatio: false
                 }}
             />

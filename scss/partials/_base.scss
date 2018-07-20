@@ -27,6 +27,13 @@ body {
     }
   }
 
+  @include tablet {
+    flex-direction: column;
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
   @include mobile {
     flex-direction: column;
     [class*="col-"] {

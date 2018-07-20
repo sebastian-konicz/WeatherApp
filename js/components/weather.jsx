@@ -23,23 +23,26 @@ class Weather extends React.Component {
 
     componentWillReceiveProps(nextProps){
         const conditions = nextProps.weather
-        this.setState({
 
-            weatherId:          conditions.weather[0].id,
-            weatherDescription: conditions.weather[0].description,
+        if(conditions.weather != undefined) {
+            this.setState({
 
-            temperature:        Math.floor(Number(conditions.main.temp)),
-            pressure:           Math.floor(Number(conditions.main.pressure)),
+                weatherId: conditions.weather[0].id,
+                weatherDescription: conditions.weather[0].description,
 
-            clouds:             Math.floor(Number(conditions.clouds.all)),
-            humidity:           Math.floor(Number(conditions.main.humidity)),
+                temperature: Math.floor(Number(conditions.main.temp)),
+                pressure: Math.floor(Number(conditions.main.pressure)),
 
-            windSpeed:          Math.floor(Number(conditions.wind.speed)),
-            windDirection:      Math.floor(Number(conditions.wind.deg)),
+                clouds: Math.floor(Number(conditions.clouds.all)),
+                humidity: Math.floor(Number(conditions.main.humidity)),
 
-            sunrise:            conditions.sys.sunrise,
-            sunset:             conditions.sys.sunset,
-        })
+                windSpeed: Math.floor(Number(conditions.wind.speed)),
+                windDirection: Math.floor(Number(conditions.wind.deg)),
+
+                sunrise: conditions.sys.sunrise,
+                sunset: conditions.sys.sunset,
+            })
+        }
     }
 
     render() {
@@ -48,8 +51,6 @@ class Weather extends React.Component {
         if(this.state.weatherId !== ""){
             isVisible = "visible"
         }
-
-
 
         //Setting time of sunset
         let sunriseDate = new Date(this.state.sunrise*1000)
