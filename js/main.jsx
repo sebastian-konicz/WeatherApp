@@ -23,7 +23,7 @@ class App extends React.Component {
 
     getDataFromFormWeather = (city, country) => {
         const API_KEY = "1e70ccc58de72099cfb3f9ed17c63422"
-        const urlWeather = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=pl&APPID=${API_KEY}`
+        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&lang=pl&APPID=${API_KEY}`
 
         fetch(urlWeather)
             .then(resp => resp.json())
@@ -38,7 +38,7 @@ class App extends React.Component {
 
     getDataFromFormForecast = (city, country) => {
         const API_KEY = "1e70ccc58de72099cfb3f9ed17c63422"
-        const urlForcast = `http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&lang=pl&APPID=${API_KEY} `
+        const urlForcast = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=metric&lang=pl&APPID=${API_KEY} `
 
         fetch(urlForcast)
             .then(resp => resp.json())
@@ -52,7 +52,7 @@ class App extends React.Component {
 
     getWeather = (latitude, longitude) => {
         const API_KEY = "1e70ccc58de72099cfb3f9ed17c63422"
-        const urlWeather = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&APPID=${API_KEY}`
+        const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&APPID=${API_KEY}`
         console.log(API_KEY)
         fetch(urlWeather)
             .then(resp => resp.json())
@@ -68,7 +68,7 @@ class App extends React.Component {
 
     getForecast = (latitude, longitude) => {
         const API_KEY = "1e70ccc58de72099cfb3f9ed17c63422"
-        const urlForecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&APPID=${API_KEY}`
+        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&APPID=${API_KEY}`
         console.log(API_KEY)
         fetch(urlForecast)
             .then(resp => resp.json())
