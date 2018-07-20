@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "chart.js": "^2.7.2",
+    "copy-webpack-plugin": "^4.5.2",
     "react": "^15.4.0",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^15.4.0",
