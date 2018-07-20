@@ -50,7 +50,7 @@ class Forecast extends React.Component {
                 chartData: {
                 ...prevState.chartData,
                 labels: dateArray,
-                datasets: [ {label: 'Temperatura', data: temperatureArray }]
+                datasets: [ { type: 'line', label: 'Temperatura', data: temperatureArray, yAxisID: 'y-axis-2' },{ type: 'bar', label: 'Temperatura', data: temperatureArray, yAxisID: 'y-axis-1' }]
                 }
             }))
         }
@@ -85,10 +85,29 @@ class Forecast extends React.Component {
                     },
                     scales: {
                         yAxes: [{
-                            ticks: {
-                                fontSize: 20
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            id: 'y-axis-1',
+                            gridLines: {
+                                display: false
+                            },
+                            labels: {
+                                show: true
                             }
-                        }],
+                        },
+                            {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                id: 'y-axis-2',
+                                gridLines: {
+                                    display: false
+                                },
+                                labels: {
+                                    show: true
+                                }
+                            }],
                         xAxes: [{
                             ticks: {
                                 fontSize: 20

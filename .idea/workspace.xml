@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b15205b-7df4-4a24-93b0-1d1b158e04d4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/components/forecast.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/forecast.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/forecast_5days.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/forecast_5days.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/components/weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/weather.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/partials/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/partials/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/partials/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/partials/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/partials/_section_forecast.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/partials/_section_forecast.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/partials/_section_weather.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/partials/_section_weather.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,8 +46,8 @@
       <file leaf-file-name="forecast.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/components/forecast.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+            <state relative-caret-position="470">
+              <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -158,7 +148,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="75" />
-    <option name="y" value="34" />
+    <option name="y" value="32" />
     <option name="width" value="1836" />
     <option name="height" value="1048" />
   </component>
@@ -259,12 +249,12 @@
       <workItem from="1531744176883" duration="19456000" />
       <workItem from="1531819524899" duration="627000" />
       <workItem from="1531821020062" duration="55695000" />
-      <workItem from="1532072878092" duration="3855000" />
+      <workItem from="1532072878092" duration="4699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79633000" />
+    <option name="totallyTimeSpent" value="80477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -581,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/components/forecast.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
+        <state relative-caret-position="470">
+          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
