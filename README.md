@@ -21,5 +21,5 @@ The aim of this project was to create a fully functioning and responsive weather
 [Live Demo] (https://sebastian-konicz.github.io/WeatherApp/)
 
 ## Page screenshot
-![Image](https://github.com/sebastian-konicz/SitOnChair/blob/master/WeatherApp.png)
+![Image](https://github.com/sebastian-konicz/WeatherApp/blob/master/WeatherApp.png)
 
