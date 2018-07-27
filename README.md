@@ -1,4 +1,4 @@
-#Pogoda
+# Pogoda
 Minimalistic weather application using OpenWeatheMap API
 
 ## About
