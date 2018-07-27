@@ -5,7 +5,7 @@ class Form extends React.Component {
         super(props);
         this.state = {
             city: 'Miasto',
-            country: 'Kraj'
+            country: 'Kod kraju (np. PL)'
         };
     }
 
